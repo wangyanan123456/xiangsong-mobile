@@ -8,7 +8,7 @@
 <script>
 import Foot from './components/footer/Footer.vue'
 export default {
-  components:{
+  components: {
     Foot
   }
 }
