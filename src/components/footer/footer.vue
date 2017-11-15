@@ -6,7 +6,7 @@
 				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
 					<p :style="{color: $route.path === '/' ? 'red' : ''}">我的</p>
 				</router-link>
-				<router-link to = '/'>
+				<router-link to = '/try'>
 				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
 					<p :style="{color: $route.path === '/try' ? 'red' : ''}">体验卡</p>
 				</router-link>
