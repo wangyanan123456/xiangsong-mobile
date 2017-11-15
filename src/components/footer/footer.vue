@@ -15,27 +15,27 @@
 	</div>
 </template>
 <script type="text/javascript">
-	export default{
-		name:'Foot'
-	}
+export default {
+  name: 'Foot'
+}
 </script>
 <style scoped>
-    .footer{
-    	position: fixed;
-    	bottom: 0rem;
-    	font-size: 0.2rem;
-    	background: #fff;
-    	height: 0.6rem;
-    	line-height: 0.6rem;
-    }
-	.footer ul{
-		display: flex;
-	}
-	.footer li{
-		margin-left: 0.6rem;
-		margin-right: 0.5rem;
-	}
-	.footer p{
-		color: #000;
-	}
+.footer {
+  position: fixed;
+  bottom: 0rem;
+  font-size: 0.2rem;
+  background: #fff;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.footer ul {
+  display: flex;
+}
+.footer li {
+  margin-left: 0.6rem;
+  margin-right: 0.5rem;
+}
+.footer p {
+  color: #000;
+}
 </style>

@@ -1,13 +1,15 @@
 import Vue from 'vue'
 import App from './App'
-import router from './router/index.js'
+import router from './router'
 import './common/css/reset.css'
-import './common/js/rem.js'
-import jquery from './common/js/jquery.js'
+import './common/js/rem'
+import $ from 'jquery'
 
-new Vue({
+const vm = new Vue({
   el: '#app',
   router,
   template: '<App/>',
   components: { App }
 })
+
+console.log(vm, $)

@@ -5,15 +5,15 @@ import Try from '@/components/try/try.vue'
 
 Vue.use(Router)
 
-export default  new Router({
-  routes:[
+export default new Router({
+  routes: [
     {
-      path:'/',
+      path: '/',
       component: My
     },
     {
-      path:'/try',
-      component: Try,
+      path: '/try',
+      component: Try
     }
   ]
 })
