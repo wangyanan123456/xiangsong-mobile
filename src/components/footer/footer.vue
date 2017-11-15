@@ -1,15 +1,19 @@
 <template>
-	<div>
+	<div class="footer">
 		<ul>
 			<li>
 				<router-link to = '/'>
 				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
 					<p :style="{color: $route.path === '/' ? 'red' : ''}">我的</p>
 				</router-link>
-				<router-link to = '/'>
+				
+			</li>
+			<li>
+				<router-link to = '/try'>
 				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
 					<p :style="{color: $route.path === '/try' ? 'red' : ''}">体验卡</p>
 				</router-link>
+				
 			</li>
 		</ul>
 	</div>
@@ -32,7 +36,7 @@ export default {
   display: flex;
 }
 .footer li {
-  margin-left: 0.6rem;
+  margin-left: 1.5rem;
   margin-right: 0.5rem;
 }
 .footer p {

@@ -12,4 +12,4 @@ const vm = new Vue({
   components: { App }
 })
 
-console.log(vm, $)
+console.log($, vm)
