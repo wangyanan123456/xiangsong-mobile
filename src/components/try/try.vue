@@ -1,57 +1,60 @@
 <template>
 	<div id="try">
+		<router-view></router-view>
 		<div class="title">体验卡申请</div>
 		<img  class="banner" src="./img/banner.png" >
 		<form>
-		 <ul>
-		 	<li class="left">备注:</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='其他的需求(选填)' />
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">手机号</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='仅支持中国大陆手机号' />
-		 	</li>
-		 	<li>
-		 		<div class="check">发送验证码</div>
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">验证码</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='请输入验证码' />
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">所在城市</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='北京' />
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">收货地址</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='请选择您的写字楼，小区或学校' @click = 'plice' />
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">详细地址</li>
-		 	<li class="right">
-		 		<input type="text" placeHolder='请填写详细门牌号等' />
-		 	</li>
-		 </ul>
-		 <ul>
-		 	<li class="left">选择送达时间</li>
-		 	
-		 </ul>
-		 <button>先预定，后付费</button>
+			 <ul>
+			 	<li class="left">备注:</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='其他的需求(选填)' />
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">手机号</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='仅支持中国大陆手机号' />
+			 	</li>
+			 	<li>
+			 		<div class="check">发送验证码</div>
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">验证码</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='请输入验证码' />
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">所在城市</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='北京' />
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">收货地址</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='请选择您的写字楼，小区或学校' @click = 'plice' />
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">详细地址</li>
+			 	<li class="right">
+			 		<input type="text" placeHolder='请填写详细门牌号等' />
+			 	</li>
+			 </ul>
+			 <ul>
+			 	<li class="left">选择送达时间</li>
+			 	
+			 </ul>
+			 <button>先预定，后付费</button>
 		</form>
+		
 	</div>
 </template>
 <script type="text/javascript">
 	export default{
+		name:'trys',
 		data(){
 			return{
 				
@@ -63,8 +66,9 @@
 		},
 		methods:{
 			plice:function(){
+				console.log(889)
 				this.$router.push({
-					path: '/place/place'
+					path: 'try/place'
 				})
 			}
 		}
