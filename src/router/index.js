@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import My from '@/components/my/my.vue'
 import Try from '@/components/try/try.vue'
 import Place from '@/components/place/place.vue'
+import Hi from '@/components/hi/hi.vue'
 
 Vue.use(Router)
 
@@ -17,9 +18,13 @@ export default new Router({
       component: Try,
       children: [
         {
-          path: 'place',
+          path: '/',
+          component: Hi
+        },
+         {
+          path: '/place',
           component: Place
-        }
+        },
       ]
     }
   ]
