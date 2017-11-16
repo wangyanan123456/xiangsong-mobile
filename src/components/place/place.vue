@@ -6,13 +6,35 @@
             <input  type="text" class="search-input-place" placeholder="请输入收货的写字楼、小区或学校" />
             <img src="./img/cancel.png" class="cancel">
     	</div>
-    	<ul class="list">
-    		<li>
-    			<div>
-    				<img src="">竞园
-					<p>广渠路</p>
+    	<ul class="lists">
+    		<li class="list">
+    			<div class="mapImg">
+    				<img src="./img/map.png">
+    			</div>
+    			<div class="mapDetal">
+	    			<div>竞园</div>
+	    			<p>广渠路</p>
     			</div>
     		</li>
+    		<li class="list">
+    			<div class="mapImg">
+    				<img src="./img/map.png">
+    			</div>
+    			<div class="mapDetal">
+	    			<div>竞园</div>
+	    			<p>广渠路</p>
+    			</div>
+    		</li>
+    		<li class="list">
+    			<div class="mapImg">
+    				<img src="./img/map.png">
+    			</div>
+    			<div class="mapDetal">
+	    			<div>竞园</div>
+	    			<p>广渠路</p>
+    			</div>
+    		</li>
+    		
     	</ul>
 	</div>
 	
@@ -38,6 +60,7 @@ export default{
 	.input-box{
 	    display: flex;
 	    margin-left: 0.3rem;
+	    margin-bottom: 0.5rem;
 	}
 	.search{
 		width:0.4rem;
@@ -56,5 +79,29 @@ export default{
 		width: 0.25rem;
 		height: 0.25rem;
 		margin-top: 0.05rem;
+	}
+	.list{
+		display: flex;
+		text-align: left;
+		height: 0.88rem;
+		margin-top: 0.1rem;
+		padding-left: 0.2rem;
+		/*background: red;*/
+	}
+	.mapDetal{
+		margin-left: 0.1rem;
+	}
+	.mapDetal div{
+		font-size: 0.32rem;
+		color: #000;
+	}
+	.mapDetal p{
+		font-size: 0.2rem;
+		color: #999999;
+		margin-top: 0.05rem;
+	}
+	.mapImg img {
+		width: 0.35rem;
+		height: 0.35rem;
 	}
 </style>

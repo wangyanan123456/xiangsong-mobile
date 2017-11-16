@@ -3,13 +3,13 @@
 		<div class="title">体验卡申请</div>
 		<img  class="banner" src="./img/banner.png" >
 		<form>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">备注:</li>
 			 	<li class="right">
 			 		<input type="text"  v-model = 'other' placeHolder='其他的需求(选填)' />
 			 	</li>
 			 </ul>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">手机号</li>
 			 	<li class="right">
 			 		<input type="text"   v-model = 'phoneNumber' placeHolder='仅支持中国大陆手机号' />
@@ -18,32 +18,32 @@
 			 		<div class="check">发送验证码</div>
 			 	</li>
 			 </ul>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">验证码</li>
 			 	<li class="right">
 			 		<input type="text" placeHolder='请输入验证码' />
 			 	</li>
 			 </ul>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">所在城市</li>
 			 	<li class="right">
 			 		<input type="text" placeHolder='北京' />
 			 	</li>
 			 </ul>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">收货地址</li>
 			 	<li class="right">
 			 		<input type="text" placeHolder='请选择您的写字楼，小区或学校' @click = 'plice' />
 			 	</li>
 			 </ul>
-			 <ul>
+			 <ul class="ul">
 			 	<li class="left">详细地址</li>
 			 	<li class="right">
 			 		<input type="text"  placeHolder='请填写详细门牌号等' />
 			 	</li>
 			 </ul>
-			 <ul>
-			 	<li class="left">选择送达时间</li>
+			 <ul class="uls">
+			 	<li class="left last">选择送达时间</li>
 			 	
 			 </ul>
 			 <button>先预定，后付费</button>
@@ -93,7 +93,7 @@
 	form{
 		font-size: 0.26rem;
 	}
-	ul{
+	.ul{
 		display: flex;
 		height: 0.91rem;
 		line-height: 1.2rem;
@@ -101,7 +101,10 @@
 		border-bottom: 0.01rem solid #c9c9c9;
 
 	}
-	ul li:last-child{
+	.uls{
+		display: flex;
+		height: 0.91rem;
+		line-height: 1.2rem;
 		border-bottom: none;
 
 	}
@@ -126,7 +129,7 @@
 		color: #fff;
 		background: #f4413f;
 		border-radius: 0.5rem;
-		margin-bottom: 0.5rem;
+		margin-bottom: 1rem;
 	}
 	.check{
 		background: #f4413f;

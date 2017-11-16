@@ -1,7 +1,11 @@
 <template>
-	<div>
-		<h1>这是我的页面</h1>
+	<div id="my">
+		<router-view></router-view>
 	</div>
 </template>
 <script type="text/javascript">
+
+export default{
+	
+}
 </script>
