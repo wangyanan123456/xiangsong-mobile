@@ -15,12 +15,12 @@ export default new Router({
     {
       path: '/try',
       component: Try,
-      children:[
+      children: [
         {
-          path:'place',
-          component:Place,
+          path: 'place',
+          component: Place
         }
-      ],
+      ]
     }
   ]
 })
