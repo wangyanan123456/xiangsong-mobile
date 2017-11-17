@@ -1,12 +1,12 @@
 <template>
-	<div id="searchPlace">
+	<div id="searchPlace" v-cloak>
 		<div class="title">搜索地址</div>
         <div class="input-box">
             <img src="./img/search.png"  class="search">
             <input  type="text" class="search-input-place" placeholder="请输入收货的写字楼、小区或学校" />
             <img src="./img/cancel.png" class="cancel">
     	</div>
-    	<ul class="lists">
+    	<!-- <ul class="lists">
     		<li class="list">
     			<div class="mapImg">
     				<img src="./img/map.png">
@@ -35,14 +35,12 @@
     			</div>
     		</li>
     		
-    	</ul>
+    	</ul> -->
 	</div>
 	
 </template>
 <script type="text/javascript">
-export default{
-	name:'Place'
-}
+
 </script>
 <style scoped>	
 	#searchPlace{

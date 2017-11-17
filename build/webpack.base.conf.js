@@ -13,6 +13,7 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -28,6 +29,9 @@ module.exports = {
     }
   },
   module: {
+    externals: {
+   'AMap': 'AMap',
+  },
     rules: [
       ...(config.dev.useEslint? [{
         test: /\.(js|vue)$/,

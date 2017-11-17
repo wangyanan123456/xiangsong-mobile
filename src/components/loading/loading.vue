@@ -1,16 +1,16 @@
 <template>
-	<div id="loading">
+	<div id="loading" v-cloak>
 		<div class="title">登录</div>
 		<form>
 			<div>
 				<img src="./img/phone.png" class="phone ">
-				<input type="text"   placeholder='购买体验卡的手机号'/><br/>
+				<input type="text" name='cardNumber' v-model='cardNumber'  placeholder='购买体验卡的手机号'/><br/>
 			</div>
 			<div>
 				<img src="./img/code.png" class="code">
-				<input type='text'   placeholder='验证码'/>
+				<input type='text' v-model='number'  name="code" placeholder='验证码'/>
 			</div>
-			<button @click = "toTryCard">登录</button>
+			<button @click = "toTryCard()">登录</button>
 		</form>
 
 	</div>
@@ -18,7 +18,13 @@
 <script type="text/javascript">
 	export default{
 		name:'Loading',
-			methods:{
+		data:function(){
+			return{
+				cardNumber:'',
+				number:''
+			}
+		},
+		methods:{
 			 toTryCard:function(){
 				this.$router.push({
 					path:'isTryCard'
@@ -48,7 +54,6 @@
 		height: 0.8;
 		line-height: 0.8rem;
 		width: 5rem;
-		/*background: red;*/
 		font-size: 0.26rem;
 		padding-left: 0.2rem;
 	}
@@ -74,4 +79,4 @@
 		border-radius: 0.1rem;
 		border:none;
 	}
-</style>
+</style>*/

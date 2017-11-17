@@ -1,67 +1,74 @@
 <template>
-	<div id="shenQing">
+	<div id="shenQing" v-cloak>
 		<div class="title">体验卡申请</div>
 		<img  class="banner" src="./img/banner.png" >
 		<form>
 			 <ul class="ul">
 			 	<li class="left">备注:</li>
 			 	<li class="right">
-			 		<input type="text"  v-model = 'other' placeHolder='其他的需求(选填)' />
+			 		<input type="text" name="xuqiu" v-model = 'other' placeHolder='其他的需求(选填)' />
 			 	</li>
 			 </ul>
 			 <ul class="ul">
 			 	<li class="left">手机号</li>
 			 	<li class="right">
-			 		<input type="text"   v-model = 'phoneNumber' placeHolder='仅支持中国大陆手机号' />
+			 		<input type="text"  autocomplete="off"  name="phoneNumber" v-model = 'phoneNumber' v-on:focus="inpuPhoneNumber" placeHolder='仅支持中国大陆手机号' />
 			 	</li>
 			 	<li>
-			 		<div class="check">发送验证码</div>
+			 		<div class="check" @click='send()'>发送验证码</div>
 			 	</li>
 			 </ul>
 			 <ul class="ul">
 			 	<li class="left">验证码</li>
 			 	<li class="right">
-			 		<input type="text" placeHolder='请输入验证码' />
+			 		<input type="text"  name="checkCode" placeHolder='请输入验证码' />
 			 	</li>
 			 </ul>
 			 <ul class="ul">
 			 	<li class="left">所在城市</li>
 			 	<li class="right">
-			 		<input type="text" placeHolder='北京' />
+			 		<input type="text"  name='city' placeHolder='北京' />
 			 	</li>
 			 </ul>
 			 <ul class="ul">
 			 	<li class="left">收货地址</li>
 			 	<li class="right">
-			 		<input type="text" placeHolder='请选择您的写字楼，小区或学校' @click = 'plice' />
+			 		<input type="text" name="place" placeHolder='请选择您的写字楼，小区或学校' @click = 'plice' />
 			 	</li>
 			 </ul>
 			 <ul class="ul">
 			 	<li class="left">详细地址</li>
 			 	<li class="right">
-			 		<input type="text"  placeHolder='请填写详细门牌号等' />
+			 		<input type="text"  name="menCode" placeHolder='请填写详细门牌号等' />
 			 	</li>
 			 </ul>
 			 <ul class="uls">
 			 	<li class="left last">选择送达时间</li>
-			 	
+			 <!-- 	<group :title="$t('Custom minute list: every 15 minutes')">
+			      <datetime v-model="minuteListValue" format="YYYY-MM-DD HH:mm" :minute-list="['00', '15', '30', '45']" @on-change="change" :title="$t('Birthday')"></datetime>
+			    </group> -->
+
 			 </ul>
-			 <button>先预定，后付费</button>
+			 <button class="button" @click = 'confirm()'>先预定，后付费</button>
 		</form>
 	</div>
 </template>
 <script type="text/javascript">
 	export default{
+
 		name:'Hi',
 		data(){
 			return{
 				other:'',
-				phoneNumber:''
+				phoneNumber:'',
+				minuteListValue: '2017-06-12 09:00',
 			}
 
 		},
 		mounted(){
-
+			
+		},
+		computed:{
 		},
 		methods:{
 			plice:function(){
@@ -69,7 +76,37 @@
 				this.$router.push({
 					path: 'place'
 				})
+			},
+			inpuPhoneNumber:function(){
+				this.phoneNumber = ''
+			},
+			confirm:function(){
+				console.log(this.phoneNumber)
+				
+			},
+			change (value) {
+		      console.log('change', value)
+		    },
+			send:function(){
+				console.log(this.phoneNumber)
+				if(!(/^1[34578]\d{9}$/.test(this.phoneNumber))){
+					 alert("手机号码有误，请重填");  
+        			return false;
+				}
+				$.ajax({
+					type:'POST',
+					data:{
+						mobile:this.phoneNumber,
+						type:2
+					},
+					url:'/api/send',
+					success: (res) => {
+						console.log(res)
+						
+					}
+				})
 			}
+			
 		}
 	}
 </script>
@@ -97,7 +134,6 @@
 		display: flex;
 		height: 0.91rem;
 		line-height: 1.2rem;
-		/*background: red;*/
 		border-bottom: 0.01rem solid #c9c9c9;
 
 	}
@@ -120,7 +156,7 @@
 		font-size: 0.28rem;
 	}
 
-	button{
+	.button{
 		border: none;
 		margin-top: 1.3rem;
 		width: 3.95rem;

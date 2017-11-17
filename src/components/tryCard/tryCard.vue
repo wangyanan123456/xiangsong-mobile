@@ -1,5 +1,5 @@
 <template>
-	<div id="tryCard">
+	<div id="tryCard" v-cloak>
 		<div class="cardTop">
 			<div class="title">我的体验卡<span>分享抢大礼</span></div>
 			<!-- <div>分享抢大礼</div> -->
