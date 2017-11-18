@@ -2,11 +2,13 @@
   <div id="app">
     <router-view></router-view>
     <Foot></Foot>
+    <!-- <Try></Try> -->
   </div>
 </template>
 
 <script>
 import Foot from './components/footer/Footer.vue'
+// import Try from './components/try/try.vue'
 export default {
   components: {
     Foot

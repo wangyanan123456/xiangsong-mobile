@@ -12,26 +12,26 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   component: My,
+    //   children:[
+    //     {
+    //       path:'/',
+    //       component:Loading
+    //     },
+    //     {
+    //       path:'/isTryCard',
+    //       component:TryCard
+    //     },
+    //     {
+    //       path:'/noTryCard',
+    //       component:NoCard
+    //     }
+    //   ]
+    // },
     {
       path: '/',
-      component: My,
-      children:[
-        {
-          path:'/',
-          component:Loading
-        },
-        {
-          path:'/isTryCard',
-          component:TryCard
-        },
-        {
-          path:'/noTryCard',
-          component:NoCard
-        }
-      ]
-    },
-    {
-      path: '/try',
       component: Try,
       children: [
         {

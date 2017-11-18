@@ -1,20 +1,20 @@
 <template>
 	<div class="footer">
-		<ul>
+		<!-- <ul>
 			<li>
 				<router-link to = '/try'>
-				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
+				    <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div>
 					<p :style="{color: $route.path === '/try' ? 'red' : ''}">体验卡</p>
 				</router-link>
 				
 			</li>
 			<li>
 				<router-link to = '/'>
-				    <!-- <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div> -->
+				    <div  class="img" :style = "{background: $route.path === '/' ? '/img/icon_home_press@2x.png' : ''}"></div>
 					<p :style="{color: $route.path === '/' ? 'red' : ''}">我的</p>
 				</router-link>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </template>
 <script type="text/javascript">
@@ -29,8 +29,9 @@ export default {
   bottom: 0rem;
   font-size: 0.2rem;
   background: #f7f7fa;
-  height: 0.8rem;
-  line-height: 0.8rem;
+  height: 0;
+  /*height: 0.8rem;*/
+  /*line-height: 0.8rem;*/
   border-top:0.02rem solid #dcdbe0;
   z-index: 100;
 }

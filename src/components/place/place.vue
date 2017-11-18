@@ -40,7 +40,19 @@
 	
 </template>
 <script type="text/javascript">
+export default{
+	data:function(){
+		return{
 
+		}
+	},
+	mounted(){
+
+	},
+	computed:{
+
+	}
+}
 </script>
 <style scoped>	
 	#searchPlace{

@@ -29,9 +29,7 @@ module.exports = {
     }
   },
   module: {
-    externals: {
-   'AMap': 'AMap',
-  },
+   
     rules: [
       ...(config.dev.useEslint? [{
         test: /\.(js|vue)$/,
